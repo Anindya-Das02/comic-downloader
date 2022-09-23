@@ -1,0 +1,13 @@
+{
+    "source_url" : "https://official-complete-2.eorzea.us/manga/Naruto/0692-*.png",
+    "d_type" : "padded_incremental",
+    "padded_incremental" : {
+        "pad_len" : 2,
+        "start_no" : 1
+    },
+    "total_pages" : 16,
+    "file_name" : "Naruto chapter-692",
+    "img_extension" : "png",
+    "clean_up" : true,
+    "file_source" : null
+}
