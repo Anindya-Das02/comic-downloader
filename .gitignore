@@ -1,2 +1,4 @@
 downloads
-img_*
+imgs_*
+*.txt
+__pycache__

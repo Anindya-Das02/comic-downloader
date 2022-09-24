@@ -5,27 +5,12 @@ import os
 import shutil
 import uuid
 from PIL import Image
+from argumentManager import ArgumentManager
 
-APP_VERSION = "v1.0"
-APP_AUTHOR = "Anindya Das"
-APP_REPO_URL = "https://github.com/Anindya-Das02"
-APP_INFO = f"""Comic Downloader  ({APP_VERSION})
-=========================
-A simple python script to download your favourite Comics, Mangas & more. Easily create good quality pdfs.
-Please read "How to use.md" from github for detailed instructions.
-
-Created By: {APP_AUTHOR}
-GitHub: {APP_REPO_URL}"""
-APP_HELP = f"Please refer {APP_REPO_URL}"
-
-class ArgumentManager:
-    def __init__(self, arg) -> None:
-        if arg == "--version" or arg == "-v":
-            print(f"App version: {APP_VERSION}")
-        elif arg == "--info" or arg == "-i":
-            print(APP_INFO)
-        elif arg == "--help" or arg == "-h":
-            print(APP_HELP)
+"""
+Author: Anindya Das
+Twitter: @_dev_das
+"""
 
 class ComicDownloader:
 
@@ -55,7 +40,7 @@ class ComicDownloader:
         if not os.path.isdir("downloads"):
             os.mkdir("downloads")
 
-        # creating dir imgs-*/ to save (or) hold downloaded images
+        # creating dir imgs_*/ to save (or) hold downloaded images
         uuid_string = str(uuid.uuid1().hex)
         self.target_dir = f"imgs_{uuid_string}"
         os.mkdir(self.target_dir)
